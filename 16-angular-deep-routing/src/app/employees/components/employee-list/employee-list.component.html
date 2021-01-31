@@ -1,0 +1,24 @@
+<table class="table table-hover text-center table-danger table-striped">
+  <thead class="bg-dark text-white">
+  <tr>
+    <th>SNO</th>
+    <th>Image</th>
+    <th>NAME</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees" (click)="clickEmployee(employee)">
+    <td>{{employee.login.uuid.substr(employee.login.uuid.length - 4)}}</td>
+    <td>
+      <img [src]="employee.picture.large" alt="" width="50" height="50">
+    </td>
+    <td>{{employee.name.first}} {{employee.name.last}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.dob.age}} Yrs</td>
+    <td>{{employee.location.city}}</td>
+  </tr>
+  </tbody>
+</table>

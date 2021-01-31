@@ -1,0 +1,36 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Contact Us</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dolores explicabo, libero non sed similique? Assumenda atque cumque cupiditate, dolorem fugit illo natus nihil nisi praesentium quaerat sint vitae voluptates, voluptatum? Asperiores consequatur doloremque dolorum earum expedita, nam, nihil nulla obcaecati quae quia ratione reiciendis rem sint, sunt vitae.</p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4 m-auto">
+      <div class="card animated jello">
+        <div class="card-header bg-danger text-white">
+          <p class="h4">Contact Us</p>
+        </div>
+        <div class="card-body bg-light">
+          <form (submit)="contactUs()">
+            <div class="form-group">
+              <input [(ngModel)]="user.username" name="name" type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input [(ngModel)]="user.email" name="email" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input [(ngModel)]="user.mobile" name="mobile" type="number" class="form-control" placeholder="Mobile">
+            </div>
+            <div class="form-group">
+              <textarea [(ngModel)]="user.message" name="message" class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-danger btn-sm" value="Contact">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

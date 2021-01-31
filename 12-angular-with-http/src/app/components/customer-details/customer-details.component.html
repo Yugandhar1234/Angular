@@ -1,0 +1,28 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Customer Details</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto consectetur dolorum earum iusto magni nisi numquam odio officiis voluptate. Alias eos et facilis ipsam iusto maxime quibusdam sint velit?</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let customer of customers; let i = index">
+      <div class="card mt-3">
+        <div class="card-header bg-dark text-white">
+          <div class="p-4"></div>
+        </div>
+        <div class="card-body text-center">
+          <img [src]="customer.picture.medium" alt="" class="card-img-c">
+          <ul class="list-group mt-3">
+            <li class="list-group-item">
+              <span>{{customer.name.first}} {{customer.name.last}}</span><br>
+              <span>{{customer.email}}</span><br>
+              <span>AGE : {{customer.dob.age}} Yrs.</span><br>
+              <span>Address : {{customer.location.state}}</span><br>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Welcome to Customer List</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur culpa dolore enim eveniet exercitationem facilis hic, id inventore iste labore mollitia nulla numquam odio perferendis perspiciatis quasi quo voluptatum!</p>
+      <a routerLink="/customers" class="btn btn-danger btn-sm">back</a>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <table class="table table-hover text-center table-danger table-striped">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th>SNO</th>
+            <th>Image</th>
+            <th>NAME</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+              <td>{{customer.login.uuid.substr(customer.login.uuid.length - 4)}}</td>
+              <td>
+                <img [src]="customer.picture.large" alt="" width="50" height="50">
+              </td>
+              <td>
+                <a routerLink="/customers/{{customer.login.uuid}}">{{customer.name.first}} {{customer.name.last}}</a>
+              </td>
+              <td>{{customer.email}}</td>
+              <td>{{customer.dob.age}} Yrs</td>
+              <td>{{customer.location.city}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

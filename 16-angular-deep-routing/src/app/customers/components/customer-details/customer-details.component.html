@@ -1,0 +1,43 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Customer Details : {{selectedCustomer.name.first}} {{selectedCustomer.name.last}}</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam amet commodi cumque deserunt dicta doloremque fuga illo incidunt, ipsa minima neque nesciunt nisi quo recusandae repellendus voluptatibus. Ab, sint?</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-danger text-white">
+          <p class="h4">Welcome : {{selectedCustomer.name.first}} {{selectedCustomer.name.last}}</p>
+        </div>
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <img [src]="selectedCustomer.picture.large" class="img-fluid img-thumbnail d-block m-auto" alt="">
+            </div>
+            <div class="col-md-8">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  NAME : {{selectedCustomer.name.first}} {{selectedCustomer.name.last}}
+                </li>
+                <li class="list-group-item">
+                  Email : {{selectedCustomer.email}}
+                </li>
+                <li class="list-group-item">
+                  AGE : {{selectedCustomer.dob.age}} Yrs
+                </li>
+                <li class="list-group-item">
+                  Location : {{selectedCustomer.location.city}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a routerLink="/customers/list" class="btn btn-danger btn-sm">back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

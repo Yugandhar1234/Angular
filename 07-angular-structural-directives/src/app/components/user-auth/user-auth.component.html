@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <button (click)="login()" *ngIf="!isLoggedIn" class="btn btn-success btn-sm">Login</button>
+          <button (click)="logOut()" *ngIf="isLoggedIn" class="btn btn-danger btn-sm">LogOut</button>
+        </div>
+        <div class="card-body">
+          <div *ngIf="!firstLoad">
+            <p *ngIf="isLoggedIn" class="h2">Welcome to Angular Course</p>
+            <p *ngIf="!isLoggedIn" class="h2">Thanks for Taking Angular Course</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita necessitatibus sint voluptate voluptatem. Ad asperiores deleniti eligendi, facere id maiores nisi possimus praesentium quaerat quos ratione rem, rerum, voluptatibus?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

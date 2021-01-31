@@ -1,0 +1,59 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-success">Create New Product</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda, blanditiis commodi dolore excepturi nostrum officia perferendis rerum sit voluptates. Ab eligendi iusto nisi porro praesentium quaerat ratione, reprehenderit sed.</p>
+    </div>
+  </div>
+  <!--<pre>{{product | json}}</pre>-->
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <p class="h4">Create Product</p>
+        </div>
+        <div class="card-body">
+          <form (submit)="submitAddProduct()">
+            <div class="form-group">
+              <input
+                name="name"
+                [(ngModel)]="product.name"
+                type="text" class="form-control" placeholder="Product Name">
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input
+                  (change)="onChangeImage($event)"
+                  name="image"
+                  type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Product Image</label>
+                <small *ngIf="imageFileName" class="text-success">{{imageFileName?.name}}</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                name="price"
+                [(ngModel)]="product.price"
+                type="number" class="form-control" placeholder="Price">
+            </div>
+            <div class="form-group">
+              <input
+                name="qty"
+                [(ngModel)]="product.qty"
+                type="number" class="form-control" placeholder="Available Qty">
+            </div>
+            <div class="form-group">
+              <textarea
+                name="info"
+                [(ngModel)]="product.info"
+                rows="4" class="form-control" placeholder="General Info"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success btn-sm" value="Add Product">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

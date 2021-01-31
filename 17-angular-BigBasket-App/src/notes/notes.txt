@@ -1,0 +1,28 @@
+-> app(app.module.ts)
+	-> components
+		-> navbar (ng g c navbar)
+		-> home
+		-> about
+	-> services
+	-> employees (employees.module.ts) (ng g module employees --route employees --module app.module)
+		-> components
+			-> employee-list
+			-> employee-details
+		-> services
+		    -> employee.service.ts
+	-> Stocks (stocks.module.ts) (ng g module stocks --route stocks --module app.module)
+		-> components
+			-> stock-list
+			-> stock-details
+		-> services
+		    -> stock.service.ts
+	-> Customers (customers.module.ts) (ng g module customers --route customers --module app.module)
+		-> components
+			-> customer-list
+			-> customer-details
+		-> services
+		    -> customer.service.ts
+
+customers.json
+---------------
+https://gist.githubusercontent.com/thenaveensaggam/524998af81a25426246101f9f0410f5f/raw/cfd433b4e46ef7a3fd860132f2ea5ef6bc5af0f3/customers-15082020.json

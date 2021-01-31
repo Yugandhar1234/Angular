@@ -1,0 +1,41 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Customer List</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid harum illum impedit, nulla obcaecati saepe? Ab accusantium autem commodi deleniti dicta dolore eligendi, excepturi incidunt inventore iste magnam natus, porro quae quidem ratione recusandae, tempora! Et illum nihil rem tempora!</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover text-center table-striped table-light">
+        <thead class="bg-dark text-white">
+        <tr>
+          <th>SNO</th>
+          <th>PHOTO</th>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>AGE</th>
+          <th>ADDRESS</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customers; let i = index">
+            <td>{{i + 1}}</td>
+            <td>
+              <img [src]="customer.picture.thumbnail">
+            </td>
+            <td>{{customer.name.first}} {{customer.name.last}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.dob.age}} Yrs.</td>
+            <td>{{customer.location.state}}</td>
+          </tr>
+          <tr *ngIf="errorMessage">
+            <td colspan="6" class="text-danger">
+              {{errorMessage}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

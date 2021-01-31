@@ -1,0 +1,36 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Stock Details : {{selectedStock.stock_name}}</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium magni natus nemo numquam perferendis ullam voluptas. Distinctio modi natus neque perferendis quas? Asperiores cumque dignissimos harum iusto nobis odio possimus quae voluptas? At distinctio natus quasi quos suscipit. Quod, reprehenderit.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-danger text-white">
+          <p class="h4">{{selectedStock.stock_name}}</p>
+        </div>
+        <div class="card-body bg-light">
+          <ul class="list-group">
+            <li class="list-group-item">
+              Industry : {{selectedStock.stock_industry}}
+            </li>
+            <li class="list-group-item">
+              Market : {{selectedStock.stock_market}}
+            </li>
+            <li class="list-group-item">
+              Symbol : {{selectedStock.stock_symbol}}
+            </li>
+            <li class="list-group-item">
+              Sector : {{selectedStock.stock_sector}}
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a routerLink="/stocks" class="btn btn-danger btn-sm">Stocks</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

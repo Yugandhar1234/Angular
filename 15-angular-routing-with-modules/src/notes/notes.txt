@@ -1,0 +1,44 @@
+
+home -> root -> ng g c home
+navbar -> root -> ng g c navbar
+about -> root -> ng g c about
+
+employees module (app.com/employees/)
+-----------------
+ng g module employees --route employees --module app.module
+
+ng g c employee-list --module employees.module
+ng g c employee-details --module employees.module
+
+
+App (app.module.ts)
+  -> components
+  -> services
+  -> pipes
+  -> employees (employees.module.ts)
+		-> components
+		-> services
+		-> pipes
+  -> stocks (stocks.module.ts)
+        -> components
+		-> services
+        -> pipes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

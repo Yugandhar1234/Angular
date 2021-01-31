@@ -1,0 +1,33 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3>Theme Selector</h3>
+            </div>
+            <div class="col text-white">
+              <form>
+                <div class="custom-control custom-switch">
+                  <input [(ngModel)]="darkTheme" name="theme" type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1">Apply Dark Theme</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="card-body" [class.bg-dark]="darkTheme" [class.text-white]="darkTheme">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <img [src]="imageOne" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-7">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi architecto debitis deserunt eos exercitationem illum, labore modi molestiae mollitia odio officiis perferendis possimus quidem quos, saepe sapiente tempore unde!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

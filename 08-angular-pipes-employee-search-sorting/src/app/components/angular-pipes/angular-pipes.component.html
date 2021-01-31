@@ -1,0 +1,30 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Angular Pipes / Filters</p>
+      <hr>
+      <p class="lead">{{num1 | number}}</p>
+      <p class="lead">{{num1 | number : '5.3-4'}}</p>
+      <hr>
+      <p class="lead">{{num1 | currency}}</p>
+      <p class="lead">{{num1 | currency : 'INR'}}</p>
+      <p class="lead">{{num1 | currency : 'GBP'}}</p>
+      <hr>
+      <p class="lead">{{message}}</p>
+      <p class="lead">{{message | uppercase}}</p>
+      <p class="lead">{{message | lowercase}}</p>
+      <p class="lead">{{message | slice : 6: 9}}</p>
+      <hr>
+      <p class="lead">{{0.25 | percent}}</p>
+      <hr>
+      <pre class="lead">{{student | json}}</pre>
+      <hr>
+      <p class="lead">{{today}}</p>
+      <p class="lead">{{today | date}}</p>
+      <p class="lead">{{today | date: 'shortDate'}}</p>
+      <p class="lead">{{today | date: 'longDate'}}</p>
+      <p class="lead">{{today | date: 'dd/MM/yyyy'}}</p>
+    </div>
+  </div>
+</div>
+<div style="margin-bottom: 500px"></div>

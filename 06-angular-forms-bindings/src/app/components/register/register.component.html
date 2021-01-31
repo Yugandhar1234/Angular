@@ -1,0 +1,28 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-4">
+     <!-- <pre>{{user  | json}}</pre>-->
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h4>Register Here</h4>
+        </div>
+        <div class="card-body bg-light">
+          <form (submit)="submitUser()">
+            <div class="form-group">
+              <input [(ngModel)]="user.username" name="username" type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input [(ngModel)]="user.email" name="email" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <div>
+              <input type="submit" class="btn btn-secondary btn-sm" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

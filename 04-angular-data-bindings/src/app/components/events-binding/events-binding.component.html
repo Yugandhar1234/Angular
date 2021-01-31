@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h4>Events Binding</h4>
+        </div>
+        <div class="card-body">
+            <h3>{{message}}</h3>
+          <button (click)="sayGoodMorning()" class="btn btn-success btn-sm">Good Morning</button>
+          <button (click)="sayGoodAfternoon()" class="btn btn-warning btn-sm">Good Afternoon</button>
+          <button (click)="sayGoodEvening()" class="btn btn-danger btn-sm">Good Evening</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Counter -->
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card text-center">
+        <div class="card-header bg-primary text-white">
+           <h3 class="display-3">{{counter}}</h3>
+        </div>
+        <div class="card-body">
+          <button (click)="start()" class="btn btn-success btn-sm">Start</button>
+          <button (click)="stop()" class="btn btn-danger btn-sm">Stop</button>
+          <button (click)="reset()" class="btn btn-warning btn-sm">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

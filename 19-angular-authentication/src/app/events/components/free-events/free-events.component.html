@@ -1,0 +1,29 @@
+<div class="container mt-3">
+  <div class="row animated slideInLeft">
+    <div class="col">
+      <p class="h3 text-success">Free Events</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus iste nulla officiis voluptatibus. Accusamus, architecto aut, consequuntur dignissimos dolore eligendi facere impedit incidunt magnam molestias officia quaerat totam, voluptatem voluptatibus.</p>
+      <p class="lead">Available Events :
+        <span class="font-weight-bold text-success">{{events.length}}</span>
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3 animated slideInUp delay-1s">
+    <div class="col">
+      <div *ngFor="let event of events" class="card my-4">
+        <img [src]="event.image" alt="" class="img-fluid">
+        <div class="card-body bg-light">
+          <div class="row">
+            <div class="col">
+              <p class="h3">{{event.name}}</p>
+              <p class="h5">{{event.date}}</p>
+            </div>
+            <div class="col">
+              <a routerLink="/" class="btn btn-success btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body bg-danger text-white">
+          <p class="h3">Child Component</p>
+          <form>
+            <div class="form-group">
+              <input [(ngModel)]="childWishMessage" (input)="onInput()" name="child" type="text" class="form-control" placeholder="Your message">
+            </div>
+          </form>
+          <p class="h4">From Parent : {{childMessage}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

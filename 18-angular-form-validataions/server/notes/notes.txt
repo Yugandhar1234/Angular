@@ -1,0 +1,25 @@
+Big basket application (CRUD) MEAN stack
+-----------------------------
+backend (Express & MongoDB)
+--------
+express -> for creating server
+cors -> for CORS browser functionality
+mongoose -> a schema based mongodb operations
+dotenv -> for .env file
+
+npm install express cors mongoose dotenv
+
+GET All Products -> http://127.0.0.1:5000/api/products
+GET a Product -> http://127.0.0.1:5000/api/products/:id
+POST a Product -> http://127.0.0.1:5000/api/products/
+PUT a Product -> http://127.0.0.1:5000/api/products/:id
+DELETE a Product -> http://127.0.0.1:5000/api/products/:id
+
+Product Model
+-------------
+name
+price
+qty
+info
+image
+created

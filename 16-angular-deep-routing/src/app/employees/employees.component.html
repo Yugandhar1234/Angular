@@ -1,0 +1,17 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-danger">Welcome to Employees Module</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut deserunt ex neque ratione? Exercitationem inventore libero maxime quae, similique voluptatibus voluptatum. Accusantium consequatur distinctio doloribus fugit impedit laudantium magnam minus quidem, quisquam quos rerum sint vero voluptates! Esse explicabo labore magni tempora unde! Aspernatur dolores laborum odit saepe sapiente tenetur.</p>
+      <a routerLink="/" class="btn btn-danger btn-sm">home</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <app-employee-list [employees]="employees" (sendData)="selectedEmployee=$event"></app-employee-list>
+    </div>
+    <div class="col-md-3">
+      <app-employee-card [selectedEmployee]="selectedEmployee"></app-employee-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+.img-fluid{
+  margin-top: -80px;
+}
+.table tbody tr:hover{
+  cursor: pointer;
+}

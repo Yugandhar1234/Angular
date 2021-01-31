@@ -1,0 +1,84 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-secondary">Register</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus et iste quisquam saepe sunt! Exercitationem ipsam labore necessitatibus odio, voluptatem voluptatum. Assumenda aut est illum nesciunt obcaecati quod quos vero.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <!-- Empty Error Alert Message -->
+      <div *ngIf="isEmpty" class="alert alert-danger animated zoomIn">
+        <button class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
+        <span class="font-weight-bold">Please Fill in Form</span>
+      </div>
+      <!-- Alert Message for Success -->
+      <div *ngIf="isSubmitted" class="alert alert-success animated zoomIn">
+        <button class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
+        <span class="font-weight-bold">{{message}}</span>
+      </div>
+      <div class="card" *ngIf="!isSubmitted">
+        <div class="card-header bg-secondary text-white">
+          <p class="h4">Online Class Registration</p>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="registrationForm" (submit)="submitRegister()">
+            <div class="form-group">
+              <input
+                formControlName="username"
+                type="text" class="form-control" placeholder="Name"
+                [class.is-invalid]="getUserName().touched && getUserName().invalid"
+                [class.is-valid]="getUserName().touched && getUserName().valid">
+              <div *ngIf="getUserName().touched && getUserName().invalid">
+                <small *ngIf="getUserName().errors.noSpecialCharacters" class="text-danger">Invalid Username</small>
+              </div>
+              <small *ngIf="getUserName().touched && getUserName().valid" class="text-success">Looks Good</small>
+            </div>
+            <div class="form-group">
+              <input
+                formControlName="email"
+                type="email" class="form-control" placeholder="Email"
+                [class.is-invalid]="getEmail().touched && getEmail().invalid"
+                [class.is-valid]="getEmail().touched && getEmail().valid">
+              <div *ngIf="getEmail().touched && getEmail().invalid">
+                <small *ngIf="getEmail().errors.required" class="text-danger">Email is Required</small>
+                <small *ngIf="getEmail().errors.email" class="text-danger">Invalid Email</small>
+              </div>
+              <small *ngIf="getEmail().touched && getEmail().valid" class="text-success">Looks Good</small>
+            </div>
+            <div class="form-group">
+              <input
+                formControlName="password"
+                type="password" class="form-control" placeholder="Password"
+                [class.is-invalid]="getPassword().touched && getPassword().invalid"
+                [class.is-valid]="getPassword().touched && getPassword().valid">
+              <div *ngIf="getPassword().touched && getPassword().invalid">
+                <small *ngIf="getPassword().errors.required" class="text-danger">Password is Required</small>
+                <small *ngIf="getPassword().errors.minlength" class="text-danger">Min 5 letters Required</small>
+              </div>
+              <small *ngIf="getPassword().touched && getPassword().valid" class="text-success">Looks Good</small>
+            </div>
+            <div class="form-group">
+              <select
+                formControlName="course"
+                class="form-control"
+                [class.is-invalid]="getCourse().touched && getCourse().invalid"
+                [class.is-valid]="getCourse().touched && getCourse().valid">
+                <option value="">Select a Course</option>
+                <option *ngFor="let course of courses" value="{{course}}">{{course}}</option>
+              </select>
+              <div *ngIf="getCourse().touched && getCourse().invalid">
+                <small *ngIf="getCourse().errors.required" class="text-danger">Course is Required</small>
+              </div>
+              <small *ngIf="getCourse().touched && getCourse().valid" class="text-success">Looks Good</small>
+            </div>
+            <div>
+              <input type="submit" class="btn btn-secondary btn-sm" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top: 200px"></div>

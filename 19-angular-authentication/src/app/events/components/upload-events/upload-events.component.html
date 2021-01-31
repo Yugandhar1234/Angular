@@ -1,0 +1,64 @@
+<div class="container mt-3">
+  <div class="row  animated slideInLeft">
+    <div class="col">
+      <p class="h3 text-secondary">Upload Events</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae consequatur doloribus dolorum eos, esse explicabo fugiat, itaque magni mollitia natus odit, optio pariatur repellat sint sunt temporibus unde? Deleniti.</p>
+    </div>
+  </div>
+  <div class="row animated slideInUp delay-1s">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <p class="h4">Upload Events Here</p>
+        </div>
+        <div class="card-body">
+          <form (submit)="submitUpload()">
+            <div class="form-group">
+              <input
+                name="name"
+                [(ngModel)]="event.name"
+                type="text" class="form-control" placeholder="Event Name">
+            </div>
+            <div class="form-group">
+              <input
+                name="image"
+                [(ngModel)]="event.image"
+                type="text" class="form-control" placeholder="Image URL">
+            </div>
+            <div class="form-group">
+              <select
+                name="type"
+                [(ngModel)]="event.type"
+                class="form-control" (change)="selectEventType($event)">
+                <option value="">Select Event Type</option>
+                <option value="FREE">FREE</option>
+                <option value="PRO">PRO</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input
+                name="price"
+                [(ngModel)]="event.price"
+                type="number" class="form-control" placeholder="Price" [disabled]="isFree">
+            </div>
+            <div class="form-group">
+              <input
+                name="date"
+                [(ngModel)]="event.date"
+                type="date" class="form-control" placeholder="Event Date">
+            </div>
+            <div class="form-group">
+              <textarea
+                name="info"
+                [(ngModel)]="event.info"
+                class="form-control" placeholder="Event Description" rows="3"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Upload" class="btn btn-secondary btn-sm">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

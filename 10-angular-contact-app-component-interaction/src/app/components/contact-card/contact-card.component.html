@@ -1,0 +1,34 @@
+<div class="card" *ngIf="selectedContact">
+  <div class="card-header bg-primary text-white">
+    <div class="p-4">
+
+    </div>
+  </div>
+  <div class="card-body text-center">
+    <img [src]="selectedContact.picture.large" alt="" class="img-fluid img-thumbnail rounded-circle w-50 mb-2">
+    <ul class="list-group text-left">
+      <li class="list-group-item list-group-item-secondary">
+        NAME : {{selectedContact.name.first}} {{selectedContact.name.last}}
+      </li>
+      <li class="list-group-item">
+        {{selectedContact.email}}
+      </li>
+      <li class="list-group-item">
+        AGE : {{selectedContact.dob.age}} Yrs.
+      </li>
+      <li class="list-group-item">
+        City : {{selectedContact.location.city}}
+      </li>
+      <li class="list-group-item">
+        State : {{selectedContact.location.state}}
+      </li>
+      <li class="list-group-item">
+        State : {{selectedContact.location.country}}
+      </li>
+      <li class="list-group-item">
+        Phone : {{selectedContact.phone}}
+      </li>
+
+    </ul>
+  </div>
+</div>

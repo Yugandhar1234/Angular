@@ -1,0 +1,46 @@
+Form Validation in Angular -> .html , .ts
+---------------------------
+1) Template Driven Form Validation
+	-> huge code in template , less code in .ts 
+	-> Simple Validation
+	-> hard to test
+	-> FormsModule -> ngForm -> ngModel
+
+2) Reactive Form Validation
+	-> huge code in .ts , less code in .template 
+	-> Complex validataions
+	-> easy to test 
+	-> ReactiveFormsModule
+	
+-> Components
+		-> Navbar
+		-> Home
+		-> Enroll (TDF)
+		-> Register (Reactive)	
+-> Services
+		-> user.service
+-> server
+	   -> userRouter	
+
+Form
+----
+	-> Touch / un-touch
+	-> pristine / dirty	
+	-> valid / invalid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	   
+		
+		

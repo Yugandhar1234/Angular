@@ -1,0 +1,16 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-primary">Welcome to Contact List</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nihil pariatur quos repellendus sapiente. Dolore ea recusandae ullam. Asperiores commodi consequatur ea omnis quos sequi unde velit vitae? Cupiditate, ut.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <app-contact-list (sendData)="selectedContact=$event" [contacts]="contacts"></app-contact-list>
+    </div>
+    <div class="col-md-3">
+      <app-contact-card [selectedContact]="selectedContact"></app-contact-card>
+    </div>
+  </div>
+</div>
